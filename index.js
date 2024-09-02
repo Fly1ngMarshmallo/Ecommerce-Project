@@ -4,7 +4,7 @@ import cart from '/Ecommerce-project/cart.js';
 let app = document.getElementById('app');
 let temporaryContent = document.getElementById('temporaryContent');
 
-// load layout file
+// load layout filee
 const loadTemplate = () => {
     fetch('template.html')
     .then(response => response.text())
