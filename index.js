@@ -1,10 +1,10 @@
 import products from './products.js';
-import cart from '/Ecommerce-project/cart.js';
+import cart from '/Ecommerce-Project/cart.js';
 
 let app = document.getElementById('app');
 let temporaryContent = document.getElementById('temporaryContent');
 
-// load layout filee
+// load layout file
 const loadTemplate = () => {
     fetch('template.html')
     .then(response => response.text())
