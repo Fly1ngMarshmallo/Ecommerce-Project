@@ -8,6 +8,72 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset and Flexbox Layout */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navItems a {
+            text-decoration: none;
+            margin: 0 15px;
+            background-color: #EEEEE6;
+        }
+
+        .about {
+            flex: 1; /* Allows this section to grow and fill the remaining space */
+            padding: 20px;
+            background-color: #EEEEE6; /* Light background color */
+        }
+
+        .about-container {
+            max-width: 800px; /* Limit the maximum width */
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 10px;
+        }
+
+        h1, h2, h3, p {
+            margin: 0 0 15px; /* Add margin to paragraphs and headings */
+            line-height: 1.6; /* Improve readability */
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px; /* Space between list items */
+        }       
+
+        footer {
+            padding: 10px;
+            text-align: center;
+            background-color: #EEEEE6;
+        }
+
+        @media (max-width: 600px) {
+            .about{
+                height: auto;
+            }
+            .about-container {
+                padding: 10px; /* Less padding on smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,25 +84,23 @@
                 <a href="./productsPage.html">Products</a>
                 <a href="./about.html">About</a>
             </div>
-    
         </div>
-        </header>
-        <div class="about">
-            Welcome to Comfort, where quality meets care. At Comfort, we believe that the small details make a big difference. That's why we're dedicated to providing you with the softest, most absorbent tissues available. Whether you're looking for everyday essentials or something a bit more luxurious, we've got you covered.
-            <br><br>
-            Our journey began with a simple mission: to enhance your comfort and well-being through high-quality tissue products. With a commitment to sustainability and excellence, we carefully select our materials and use advanced manufacturing processes to ensure that every tissue we offer meets our high standards.
-            <br><br>
-            Why choose Comfort?
-            <br><br>
-            Exceptional Quality: Our tissues are designed to be gentle on your skin while providing superior absorbency. <br><br>
-            Eco-Friendly: We're committed to reducing our environmental impact with sustainable practices and materials. <br><br>
-            Customer-Centric: Your satisfaction is our priority. We're here to ensure you have a seamless shopping experience and find exactly what you need. <br><br>
-            Thank you for choosing Comfort. We look forward to bringing a touch of softness into your life. <br><br>
-
-            Feel free to reach out if you have any questions or need assistance. We're here to help! <br><br>
-
-            Warm regards,
-            The Comfort Team
+    </header>
+    <div class="about">
+        <div class="about-container">
+            <p>Welcome to Comfort, where quality meets care. At Comfort, we believe that the small details make a big difference. That's why we're dedicated to providing you with the softest, most absorbent tissues available. Whether you're looking for everyday essentials or something a bit more luxurious, we've got you covered.</p>
+            <p>Our journey began with a simple mission: to enhance your comfort and well-being through high-quality tissue products. With a commitment to sustainability and excellence, we carefully select our materials and use advanced manufacturing processes to ensure that every tissue we offer meets our high standards.</p>
+            <p>Why choose Comfort?</p>
+            <ul>
+                <li><strong>Exceptional Quality:</strong> Our tissues are designed to be gentle on your skin while providing superior absorbency.</li>
+                <li><strong>Eco-Friendly:</strong> We're committed to reducing our environmental impact with sustainable practices and materials.</li>
+                <li><strong>Customer-Centric:</strong> Your satisfaction is our priority. We're here to ensure you have a seamless shopping experience and find exactly what you need.</li>
+            </ul>
+            <p>Thank you for choosing Comfort. We look forward to bringing a touch of softness into your life.</p>
+            <p>Feel free to reach out if you have any questions or need assistance. We're here to help!</p>
+            <p>Warm regards,<br>The Comfort Team</p>
         </div>
-</body>
-</html>
+    </div>
+    <footer>
+        <p>Author: Umair Khan</p>
+        <p><a href="mailto:umair.1999.khan@gmail.com">umair.1999.khan@gmail.com</a></
