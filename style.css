@@ -303,6 +303,9 @@ body.activeTabCart .container{
     position: relative;
 
 }
+.nav .icon-cart{
+    margin-right: 10px;
+}
 .nav .navItems a{
     padding: 14px 50px;
     align-items: center;
