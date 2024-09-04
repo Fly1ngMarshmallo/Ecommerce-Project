@@ -54,6 +54,19 @@ footer .footerText{
     font-weight: bold;
     background-color: #EEEEE6;
 }
+
+.about{
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding: 40px;
+    margin-top: 5rem;
+    transition: 0.5s;
+    background-color: #EEEEE6;
+    border-radius: 15px;
+}
 .icon-cart{
     position: relative;
     float: right;
