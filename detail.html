@@ -34,6 +34,15 @@
         <div class="title">Similar product</div>
         <div class="listProduct"></div>
     </div>
+
+    <!-- Popup HTML for notification -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Item added to cart</p>
+            <button id="popup-close">Close</button>
+        </div>
+    </div>
+
     <script type="module">
         import products from './products.js';
         import cart from './cart.js';
@@ -52,9 +61,11 @@
                 temporaryContent.innerHTML = null;
                 cart();
                 initApp();
-            })
+            });
         }
+        
         loadTemplate();
+        
         const initApp = () => {
             let productId = new URLSearchParams(window.location.search).get('id');
             let thisProduct = products.filter(value => value.id == productId)[0];
@@ -66,14 +77,12 @@
             detail.querySelector('.image img').src = thisProduct.image;
             detail.querySelector('.name').innerText = thisProduct.name;
             detail.querySelector('.price').innerText = '$' + thisProduct.price;
-            detail.querySelector('.description').innerText = '$' + thisProduct.description;
+            detail.querySelector('.description').innerText = thisProduct.description;
             detail.querySelector('.addCart').dataset.id = thisProduct.id;
-        
         
             let listProductHTML = document.querySelector('.listProduct');
             products.forEach(product => {
                 let newProduct = document.createElement('div');
-
                 newProduct.classList.add('item');
                 newProduct.innerHTML = 
                 `<a href="./detail.html?id=${product.id}">
@@ -89,6 +98,31 @@
                 listProductHTML.appendChild(newProduct);
             });
         
+            // Add event listeners to "Add To Cart" buttons
+            const addCartButtons = document.querySelectorAll('.addCart');
+            addCartButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    showPopup();
+                });
+            });
+        
+            // Function to show the popup
+            const showPopup = () => {
+                const popup = document.getElementById('popup');
+                popup.style.display = 'block';
+        
+                // Hide popup after 2 seconds
+                setTimeout(() => {
+                    popup.style.display = 'none';
+                }, 2000);
+            };
+        
+            // Add event listener to close button
+            const closeButton = document.getElementById('popup-close');
+            closeButton.addEventListener('click', () => {
+                const popup = document.getElementById('popup');
+                popup.style.display = 'none';
+            });
         }
     </script>
 </body>

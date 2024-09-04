@@ -1,5 +1,6 @@
 import products from './products.js';
 import cart from './cart.js'; ///Ecommerce-Project/cart.js for github Pages
+import carousel from './carousel.js'
 
 
 let app = document.getElementById('app');
@@ -15,7 +16,7 @@ const loadTemplate = () => {
         contentTab.innerHTML = temporaryContent.innerHTML;
         temporaryContent.innerHTML = null;
         cart();
-        Carousel();
+        carousel();
         initApp();
     })
 }
@@ -42,51 +43,29 @@ const initApp = () => {
          </button>`;
          listProductHTML.appendChild(newProduct);
     });
-}
-
-const Carousel = () => {
-    const slidesContainer = document.querySelector('.carousel-slides');
-    const itemsToShow = products.slice(0, 3);
-
-    // Create carousel slides
-    itemsToShow.forEach(product => {
-        const slide = document.createElement('div');
-        slide.classList.add('carousel-slide');
-        slide.innerHTML = 
-         `<a href="detail.html?id=${product.id}">
-             <img src="${product.image}">
-         </a><div class="productInfo">
-         <h2>${product.name}</h2>
-         <div class="price">$${product.price}</div>
-         <button 
-             class="addCart" 
-             data-id='${product.id}'>
-                 Add To Cart
-         </button>
-         </div>`;
-        slidesContainer.appendChild(slide);
+    // Add event listeners to "Add To Cart" buttons
+    const addCartButtons = document.querySelectorAll('.addCart');
+    addCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            showPopup();
+        });
     });
 
-    const slides = document.querySelectorAll('.carousel-slide');
-    let currentSlide = 0;
+    // Function to show the popup
+    const showPopup = () => {
+        const popup = document.getElementById('popup');
+        popup.style.display = 'block';
 
-    function showSlide(index) {
-        slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-    }
+        // Hide popup after 2 seconds
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 2000);
+    };
 
-    function goToNextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    function goToPreviousSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    document.querySelector('.prev-btn').addEventListener('click', goToPreviousSlide);
-    document.querySelector('.next-btn').addEventListener('click', goToNextSlide);
-
-    // Initialize the first slide
-    showSlide(currentSlide);
-};
+    // Add event listener to close button
+    const closeButton = document.getElementById('popup-close');
+    closeButton.addEventListener('click', () => {
+        const popup = document.getElementById('popup');
+        popup.style.display = 'none';
+    });
+}

@@ -292,40 +292,52 @@ body.activeTabCart .container{
     font-weight: 300;
 }
 
-.nav div{
-    display: inline-block; 
-    padding: 14px 20px;
-    text-align: center;
-    font-size: 24px;
-}
-.nav .navItems{
-    float: right;
-    position: relative;
-
-}
-.nav .icon-cart{
-    margin-right: 10px;
-}
-.nav .navItems a{
-    padding: 14px 50px;
+/* Navigation */
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    background-color: #EEEEE6;
 }
+
+.nav .navItems {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nav .icon-cart {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.nav .navItems a {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
 .nav .navItems a:hover {
-    transform: scale(1.05); 
-    background-color: #f3f3d4; /* Light background on hover */
-    border-radius: 20px;
+    background-color: #f3f3d4;
+    transform: scale(1.05);
 }
+
+
 
 .carousel-container {
     width: 100%;
-    height: 60%;
+    height: 60vh; /* Use viewport height for responsiveness */
     margin: 20px auto;
     overflow: hidden;
+    position: relative; /* Ensure the carousel buttons are positioned relative to the container */
 }
 
 .carousel {
     display: flex;
-    width: auto;
+    width: 100%; /* Ensure it takes the full width of the container */
     height: 100%;
     align-items: center;
     position: relative;
@@ -336,62 +348,61 @@ body.activeTabCart .container{
     display: flex;
     row-gap: 20px;
     transition: transform 0.5s ease;
-    border-radius: 20px;
+    width: 100%; /* Ensure slides take full width of the container */
+    height: 100%;
 }
 
 .carousel-slide {
     min-width: 100%;
     display: flex;
     box-sizing: border-box;
-    padding: 20px;
-    gap: 20px;
-    row-gap: 20px;
+    padding: 2rem; /* Use rem for padding for responsive scaling */
+    gap: 2rem;
     background-color: #EEEEE6;
-    padding: 20px;
     border-radius: 20px;
+    align-items: center; /* Center content within the slide */
+    justify-content: center; /* Center content within the slide */
 }
 
-.carousel-slide .productInfo{
+.carousel-slide .productInfo {
     display: inline-block;
-    padding-right: 5rem;
-    margin: auto;
-    
-    row-gap: 20px;
+    padding-right: 3rem; /* Consider using percentage for responsiveness */
+    text-align: center;
 }
-
 
 .carousel-slide img {
-    width: 80%;
+    width: 80%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
     filter: drop-shadow(0 50px 20px #0009);
 }
 
 .carousel-slide h2 {
-    margin: 10px 0;
-    font-size: 1.5em;
+    margin: 1rem 0;
+    font-size: 2rem; /* Use rem for responsive font size */
 }
 
 .carousel-slide .price {
-    font-size: 1.2em;
+    font-size: 1.5rem; /* Use rem for responsive font size */
     font-weight: bold;
     color: #333;
+    padding: 1rem 0 1rem 0;
 }
 
-
-.carousel-slides .carousel-slide h2{
+.carousel-slides .carousel-slide h2 {
     font-weight: 600;
-    font-size: xx-large;
 }
 
-.carousel-slides .carousel-slide .productInfo button{
+.carousel-slides .carousel-slide .productInfo button {
     background-color: #353432;
     color: #eee;
     border: none;
     padding: 1rem 2rem;
-    margin-top: 10px;
     border-radius: 20px;
+    font-size: 1rem; /* Use rem for button font size */
 }
-.carousel-slides .carousel-slide button:hover{
-    transform: scale(1.02)
+
+.carousel-slide button:hover {
+    transform: scale(1.02);
 }
 
 .prev-btn, .next-btn {
@@ -415,31 +426,81 @@ body.activeTabCart .container{
     right: 0;
 }
 
-/*  */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px; /* Position from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the popup */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    z-index: 1000; /* Sit on top */
+    text-align: center; /* Center text inside the popup */
+}
+
+/* Popup content */
+.popup-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 
 @media only screen and (max-width: 992px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav .navItems {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav .navItems a {
+        padding: 10px;
+        font-size: 16px;
+    }
+    .nav .icon-cart {
+        margin-left: 20px;
+    }
     .listProduct{
         grid-template-columns: repeat(3, 1fr);
     }
     .detail{
         grid-template-columns:  40% 1fr;
     }
+    .carousel-container {
+        height: 50vh; /* Adjust height for medium screens */
+    }
+
+    .carousel-slide {
+        padding: 1.5rem;
+    }
+
+    .carousel-slide img {
+        max-width: 250px;
+    }
+
+    .carousel-slide h2 {
+        font-size: 1.75rem;
+    }
+
+    .carousel-slide .price {
+        font-size: 1.25rem;
+    }
+
+    .carousel-slides .carousel-slide .productInfo button {
+        padding: 0.75rem 1.5rem;
+    }
 }
 
 
 /* mobile */
 @media only screen and (max-width: 767px) {
-    .carousel{
-        width: 100%;
-    }
-    .carousel-slides .carousel-slide{
-        text-align: center;
-        grid-template-columns: 1fr;
-    }
-    .carousel-slides .carousel-slide img{
-        width: unset;
-        height: 40vh;
-    }
     .listProduct{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -461,5 +522,36 @@ body.activeTabCart .container{
     }
     .detail .buttons{
         justify-content: center;
+    }
+    .carousel-container {
+        height: 40vh; /* Adjust height for small screens */
+    }
+
+    .carousel-slide {
+        padding: 1rem;
+    }
+
+    .carousel-slide img {
+        max-width: 400px;
+        padding-left: 30px;
+    }
+
+    .carousel-slide h2 {
+        font-size: 0.8rem;
+    }
+
+    .carousel-slide .price {
+        font-size: 0.6rem;
+        padding: 0 0 0.3rem 0;
+    }
+
+    .carousel-slides .carousel-slide .productInfo button {
+        padding: 0.5rem 1rem;
+        font-size: xx-small;
+        text-wrap: nowrap;
+    }
+    .prev-btn, .next-btn {
+        border-radius: 0.5rem;
+        padding: 0.5rem;
     }
 }
