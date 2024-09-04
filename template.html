@@ -4,29 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Comfort</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="">
+    <header>
+    <div class="nav">
+        <div class="logo"><a href="https://fly1ngmarshmallo.github.io/Ecommerce-Project/">COMFORT</a></div>
+        <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
+        </div>
+        <div class="navItems">
+            <a href="https://fly1ngmarshmallo.github.io/Ecommerce-Project/">Home</a>
+            <a href="https://fly1ngmarshmallo.github.io/Ecommerce-Project/">Products</a>
+            <a href="https://fly1ngmarshmallo.github.io/Ecommerce-Project/">About</a>  
+        </div>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </div>
+    </header>
+
     <div class="container">
-        <header>
-            <div class="nav">
-                <div class="title"><a href="https://fly1ngmarshmallo.github.io/Ecommerce-Project/">COMFORT</a></div>
-                <div class="navItems">
-                    <a href="https://fly1ngmarshmallo.github.io/Ecommerce-Project/">Home</a>
-                    <a href="https://fly1ngmarshmallo.github.io/Ecommerce-Project/">Products</a>
-                    <a href="https://fly1ngmarshmallo.github.io/Ecommerce-Project/">About</a>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slides">
+                    <!-- Slides will be dynamically added here -->
                 </div>
-                <div class="icon-cart">
-                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
-                    </svg>
-                    <span>0</span>
-                </div>
+                <button class="prev-btn">&lt;</button>
+                <button class="next-btn">&gt;</button>
             </div>
-        </header>
+        </div>
         <div id="contentTab">
             if you don't know how to run this project. You need to watch the detailed instructional video to understand how the project works
         </div>
@@ -41,8 +56,13 @@
             <button class="checkOut">Check Out</button>
         </div>
     </div>
+        <footer>
+            <p>Author: Umair Khan</p>
+            <p><a href="mailto:umair.1999.khan@gmail.com">umair.1999.khan@gmail.com</a></p>
+        </footer>
 
 
     <script src="cart.js" type="module"></script>
+    <script src="slider.js" type="module"></script>
 </body>
 </html>

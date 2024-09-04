@@ -14,7 +14,6 @@ const cart = () => {
     closeCart.addEventListener('click', () => {
         body.classList.toggle('activeTabCart');
     })
-
     const setProductInCart = (idProduct, value) => {
         let positionThisProductInCart = cart.findIndex((value) => value.product_id == idProduct);
         if(value <= 0){
