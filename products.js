@@ -4,71 +4,71 @@ const products = [
         "name":" Comfort 12 Pack 48 Rolls",
         "price": 38,
         "image": "images/1.png",
-        "description": "$Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. "
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet urna a felis scelerisque ullamcorper ut a erat. Integer at facilisis purus, vel dignissim augue. Fusce quis urna erat."
     },
     {
         "id": 2,
-        "name":" LD02 LOUNGE CHAIR",
-        "price": 250,
+        "name":" Comfort Dinner Napkins x 20 packs",
+        "price": 49,
         "image": "images/2.png",
-        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet urna a felis scelerisque ullamcorper ut a erat. Integer at facilisis purus, vel dignissim augue. Fusce quis urna erat."
     },
     {
         "id": 3,
         "name":" Finesse Quilted 4 pack 48 Rolls",
         "price": 65,
         "image": "images/3.png",
-        "description": "Quilted 4 rolls per pack. 3 ply scented. 300 sheets per roll. Total 48 rolls."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet urna a felis scelerisque ullamcorper ut a erat. Integer at facilisis purus, vel dignissim augue. Fusce quis urna erat."
     },
     {
         "id": 4,
-        "name":" LD04 LOUNGE CHAIR",
-        "price": 200,
+        "name":" Unisoft 6 pack 72 rolls",
+        "price": 38,
         "image": "images/4.png",
-        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet urna a felis scelerisque ullamcorper ut a erat. Integer at facilisis purus, vel dignissim augue. Fusce quis urna erat."
     },
     {
         "id": 5,
-        "name":" LD05 LOUNGE CHAIR",
-        "price": 300,
+        "name":" Finesse Premium 4 pack 48 rolls",
+        "price": 35,
         "image": "images/5.png",
-        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet urna a felis scelerisque ullamcorper ut a erat. Integer at facilisis purus, vel dignissim augue. Fusce quis urna erat."
     },
     {
         "id": 6,
-        "name":" LD06 LOUNGE CHAIR",
-        "price": 200,
+        "name":" Finesse Economy 4 pack 48 rolls",
+        "price": 38,
         "image": "images/6.png",
-        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet urna a felis scelerisque ullamcorper ut a erat. Integer at facilisis purus, vel dignissim augue. Fusce quis urna erat."
     },
     {
         "id": 7,
-        "name":" LD07 LOUNGE CHAIR",
-        "price": 200,
+        "name":" Comfort 6 pack 72 rolls",
+        "price": 65,
         "image": "images/7.png",
-        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet urna a felis scelerisque ullamcorper ut a erat. Integer at facilisis purus, vel dignissim augue. Fusce quis urna erat."
     },
     {
         "id": 8,
-        "name":" LD08 LOUNGE CHAIR",
-        "price": 200,
+        "name":" Comfort 100 Luncheon Napkins x 20 packs",
+        "price": 45,
         "image": "images/8.png",
-        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet urna a felis scelerisque ullamcorper ut a erat. Integer at facilisis purus, vel dignissim augue. Fusce quis urna erat."
     },
     {
         "id": 9,
-        "name":" LD08 LOUNGE CHAIR",
-        "price": 200,
+        "name":" Finesse Comfort 2 Rolls",
+        "price": 30,
         "image": "images/9.png",
-        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet urna a felis scelerisque ullamcorper ut a erat. Integer at facilisis purus, vel dignissim augue. Fusce quis urna erat."
     },
     {
-    "id": 10,
-    "name":" LD08 LOUNGE CHAIR",
-    "price": 200,
-    "image": "images/10.png",
-    "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+        "id": 10,
+        "name":" Luxury 6 pack 72 rolls",
+        "price": 50,
+        "image": "images/10.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet urna a felis scelerisque ullamcorper ut a erat. Integer at facilisis purus, vel dignissim augue. Fusce quis urna erat."
     }
-
 ];
+
 export default products;
