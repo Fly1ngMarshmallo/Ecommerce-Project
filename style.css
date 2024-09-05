@@ -448,13 +448,63 @@ body.activeTabCart .container{
 }
 
 
+/* Style for the menu toggle button */
+.menu-toggle {
+    display: none; /* Hide by default, shown on mobile */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hide navigation items on mobile */
+.navItems {
+    display: flex;
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+    .nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navItems {
+        display: none; /* Hide navigation items by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: #fff; /* Adjust based on your design */
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .navItems.show {
+        display: flex; /* Show navigation items when .show class is added */
+    }
+
+    .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+    }
+}
+
 @media only screen and (max-width: 992px) {
     .nav {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        display: flex;
+        justify-content: flex-start;
+        justify-items: stretch;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+        padding: 1rem;
     }
 
     .nav .navItems {
+        display: none;
         flex-direction: column;
         align-items: center;
         gap: 10px;
@@ -465,7 +515,10 @@ body.activeTabCart .container{
         font-size: 16px;
     }
     .nav .icon-cart {
+        display: block;
         margin-left: 20px;
+        position: absolute;
+        right: 1rem;
     }
     .listProduct{
         grid-template-columns: repeat(3, 1fr);
@@ -554,4 +607,25 @@ body.activeTabCart .container{
         border-radius: 0.5rem;
         padding: 0.5rem;
     }
+
+    .navItems {
+        display: none; /* Hide navigation items by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: #fff; /* Adjust based on your design */
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+    
+    .navItems .show {
+        display: flex; /* Show navigation items when .show class is added */
+    }
+    
+    .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+    }
+    
 }
